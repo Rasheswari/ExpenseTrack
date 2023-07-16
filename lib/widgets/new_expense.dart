@@ -1,7 +1,8 @@
 
+import 'package:expense_track/models/expense.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:expense_track/models/expense.dart';
+ 
 
 final formatter = DateFormat.yMd();
 
@@ -146,8 +147,9 @@ class _NewexpenseState extends State<Newexpense> {
                     return;
                   }
                   setState(() {
-                    _selectedCategory;
-                  });
+                    _selectedCategory = value as Category  ;
+                  },
+                  );
                 },
               ),
               const Spacer(),
